@@ -1,0 +1,17 @@
+PATH
+  remote: .
+  specs:
+    bimblis (0.0.6)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    rake (10.3.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bimblis!
+  bundler (~> 1.5)
+  rake

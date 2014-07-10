@@ -5,14 +5,14 @@ require 'bimblis/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "bimblis"
-  spec.version       = '0.0.8'
+  spec.version       = '0.0.9'
   spec.authors       = ["pabloFernandezGarcia"]
   spec.email         = ["pablofernandezgarcia@gmail.com"]
   spec.summary       = 'Easier test automation system'
   spec.description   = 'Easier test automation'
   spec.homepage      = "http://www.google.com"
   spec.license       = "MIT"
-  spec.files         = ["lib/bimblis.rb", "lib/basic_methods.rb", "lib/features/step_definitions/web_shared_steps.rb"]
+  spec.files         = ["lib/basic_methods.rb", "lib/features/step_definitions/web_shared_steps.rb"]
  # spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
  # spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
  # spec.require_paths = ["lib"]

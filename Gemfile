@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in bimblis.gemspec
-gemspec
+gem 'watir-webdriver'
+gem 'page-object'
+gem 'selenium-webdriver'
+gem 'faker'
+gem 'cucumber'

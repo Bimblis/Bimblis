@@ -37,6 +37,7 @@ GEM
     watir-webdriver (0.6.10)
       selenium-webdriver (>= 2.18.0)
     websocket (1.0.7)
+    yard (0.8.7.4)
     yml_reader (0.2)
 
 PLATFORMS
@@ -48,3 +49,4 @@ DEPENDENCIES
   page-object
   selenium-webdriver
   watir-webdriver
+  yard

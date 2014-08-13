@@ -1,109 +1,26 @@
 # encoding : utf-8
-
 module BasicMethods
 
   include PageObject
   include PageObject::PageFactory
 
+  # page object of example:
+
+  # class ExamplePage
   #
-  # METHODS SECTION
-  #
+  # link (:test_link,                                       id: 'test0')
+  # select_list (:test_select,                              id: 'test1')
+  # checkbox (:test_checkbox,                               id: 'test2')
+  # text_field(:field_study_field,                          id: 'validate_field_of_study')
 
-  def refresh_until_element_present (times, seconds, element)
-    element = element.downcase.gsub(' ', '_')
-    exists = send("#{element}?")
-    visible = send("#{element}_element")
-    times.to_i.times do |count|
-      if exists && visible.visible?
-        return true
-      else
-        sleep seconds.to_i
-        $browser.refresh
-      end
-    end
-  end
+  # -------------------------------------------------------------------------------------------------------------------
 
-  def refresh_until_element_not_present (times, seconds, element)
-    element = element.downcase.gsub(' ', '_')
-    exists = send("#{element}?")
-    visible = send("#{element}_element")
-    times.to_i.times do |count|
-      if exists && visible.visible?
-        sleep seconds.to_i
-        $browser.refresh
-      else
-        return true
-      end
-    end
-  end
+  ### INTERACTIVE METHODS
 
-  def check_actual_url (url)
-    unless $browser.url.include? eval(url)
-      p $browser.url
-      p eval(url)
-      raise 'Incorrect URL!'
-    end
-  end
-
-  def browser_alert (option)
-    option = option.downcase
-    case option
-      when 'ok'
-        $browser.alert.ok
-      when 'cancel'
-        $browser.alert.close
-      else
-        raise 'no valid option selected'
-    end
-  end
-
-  #work in progress
-  # def click_all_links(element)
-  #   element = element.downcase.gsub(' ', '_')
-  #   wait_until{send("#{element}?")}
-  #   select = send("#{element}_element")
-  #
-  #   links_array = []
-  #   $browser.links(xpath: ".//*[@title='Delete Ad']").take(total_results).each do |link|
-  #     links_array << link.title
-  #   end
-  #   links_array.each do |link_number|
-  #     $browser.link(:title, link_number).click
-  #
-  #     wait_until{close_window_button?}
-  #     close_window_button
-  #   end
-  #
-  #   if  select.visible?
-  #     select.click
-  #     element = element.downcase.gsub(' ', '_')
-  #     wait_until{send("#{element}?")}
-  #     select = send("#{element}_element")
-  #   end
-  #   select = send("#{element}_element")
-  # end
-
-  def select_element (option, element)
-    element = element.downcase.gsub(' ', '_')
-    wait_until{send("#{element}_select?")}
-    object = send("#{element}_select_element")
-    wait_until{object.visible?}
-    wait_until{object.enabled?}
-    object.select(option)
-
-    $advanced_text_info[element] = option
-  end
-
-  def hover_element (element)
-    element = element.downcase.gsub(' ', '_')
-    wait_until{send("#{element}?")}
-
-    select = send("#{element}_element")
-    wait_until{select.visible?}
-
-    select.hover
-  end
-
+  # Clicks in a page element. Works with links, buttons, divs, and most html elements.
+  # Checkboxes, radiobuttons and selects have their own method.
+  # Example: on_page('ExamplePage').click_element('test_link')
+  # @param element [String] Page element to be clicked
   def click_element (element)
     element = element.downcase.gsub(' ', '_')
     wait_until{send("#{element}?")}
@@ -114,64 +31,76 @@ module BasicMethods
     select.click
   end
 
-  def click_link (element)
+  # Hovers the mouse over a page element.
+  # Example: on_page('ExamplePage').hover_element('test_link')
+  # @param element [String] Page element to be mouse hover
+  def hover_element (element)
     element = element.downcase.gsub(' ', '_')
-    wait_until{send("#{element}_link?")}
+    wait_until{send("#{element}?")}
 
-    select = send("#{element}_link_element")
+    select = send("#{element}_element")
     wait_until{select.visible?}
 
-    send("#{element}_link")
+    select.hover
   end
 
+  # Checks or unchecks a checkbox
+  # Example: on_page('ExamplePage').check_checkbox('check', 'test_checkbox')
+  # Example: on_page('ExamplePage').check_checkbox('uncheck', 'test_checkbox')
+  # @param check [String] Indicates if the checkbox has to be checked or unchecked
+  # @param element [String] Page element of the checkbox
   def check_checkbox (check, element)
     element = element.downcase.gsub(' ', '_')
-    wait_until{send("#{element}_checkbox?")}
+    wait_until{send("#{element}?")}
 
-    select = send("#{element}_checkbox_element")
+    select = send("#{element}_element")
     wait_until{select.visible?}
 
     if check.downcase == 'check'
-      send("check_#{element}_checkbox")
+      send("check_#{element}")
     elsif check.downcase == 'uncheck'
-      send("uncheck_#{element}_checkbox")
+      send("uncheck_#{element}")
     else
-      raise 'check unselected!'
+      raise 'invalid option for step definition selected!'
     end
   end
 
-  def click_button(element)
+  # Chooses an option in a select. The option is recorded in a hash, with a key equal to the @param element.
+  # Example for a test_select with these options: "Spain, France, Italy",
+  # Example: on_page('ExamplePage').test_select('France', 'test_select')
+  # @param option [String] Option to be selected (the text the user sees)
+  # @param element [String] Page element of the select
+  def select_element (option, element)
     element = element.downcase.gsub(' ', '_')
-    wait_until{send("#{element}_button?")}
+    wait_until{send("#{element}?")}
+    object = send("#{element}_element")
+    wait_until{object.visible?}
+    wait_until{object.enabled?}
+    object.select(option)
 
-    button = send("#{element}_button_element")
+    $advanced_text_info[element] = option
+  end
+
+  # Clicks a radiobutton
+  # Example: on_page('ExamplePage').click_radiobutton
+  # @param element [String] Page element of the radiobutton
+  def click_radiobutton(element)
+    element = element.downcase.gsub(' ', '_')
+    wait_until{send("#{element}?")}
+
+    button = send("#{element}_element")
     wait_until{button.enabled?}
     wait_until{button.visible?}
 
-    send("#{element}_button")
+    send("select_#{element}")
   end
 
-  def check_exist_element(element)
-    element = element.downcase.gsub(' ', '_')
-    unless wait_until{send("#{element}?")}
-      raise "#{element} was not found!"
-    end
-  end
-
-  def check_element_not_exist(element)
-    element = element.downcase.gsub(' ', '_')
-    exists = send("#{element}?")
-    if exists
-      raise "#{element} was found!"
-    end
-  end
-
-  def record_element_text(element)
-    select = send("#{element}_element")
-    $advanced_text_info[element] = select.text
-  end
-
-  def input_text_field (element, faker = 'lorem paragraph')
+  # Writes text in a text field. The text is recorded in a hash, with a key equal to the @param element.
+  # Example: on_page('ExamplePage').input_text_field('lorem name', 'test_select')
+  # @param faker [String] Indicates the kind of text to be written. If faker input coincides with an element of the faker
+  # gem, it will generate a random string. If it doesnt coincides, the faker input will be written.
+  # @param element [String] Page element of the text field
+  def input_text_field (faker = 'lorem paragraph', element)
     element = element.downcase.gsub(' ', '_')
 
     case faker.downcase
@@ -196,63 +125,115 @@ module BasicMethods
           sample_text = faker.to_s
         end
     end
-    $text_info.push(sample_text)
     $advanced_text_info[element] = sample_text
 
-    wait_until{send("#{element}_field?")}
-
-    select = send("#{element}_field_element")
+    wait_until{send("#{element}?")}
+    select = send("#{element}_element")
     wait_until{select.visible?}
 
-    send("#{element}_field=", sample_text)
+    send("#{element}=", sample_text)
   end
 
-  def check_element_content(element)
-    element = element.downcase.gsub(' ', '_')
-    wait_until{send("#{element}?")}
-    value = "false"
-    select = send("#{element}")
+  # -------------------------------------------------------------------------------------------------------------------
 
-    $text_info.each { |x|
-      if select.downcase.include? x.downcase
-        value = "true"
+  ### CHECK INFORMATION METHODS
+
+  # Checks if an html element exists, or not exists.
+  # Example: on_page('ExamplePage').check_element_exists('exist', 'test_link')
+  # @param exist [String] Indicates if we are checking for the existence or nor existence of the element
+  # @param element [String] Page element of the element we want to check.
+  def check_element_exists(exist, element)
+    element = element.downcase.gsub(' ', '_')
+
+    if exist == 'exist'
+      unless wait_until{send("#{element}?")}
+        raise "#{element} was not found!"
       end
-    }
-    unless value == "true"
-      p select.downcase
-      p $text_info
-      raise 'Not found'
+
+    elsif exist == 'not exist'
+      if send("#{element}?")
+        raise "#{element} was found!"
+      end
+
+    else 'Incorrect option selected'
     end
   end
 
-  def check_element_not_contains(element)
-    element = element.downcase.gsub(' ', '_')
-    wait_until{send("#{element}?")}
-    value = "false"
-    select = send("#{element}")
-
-    $text_info.each { |x|
-      if select.downcase.include? x.downcase
-        value = "true"
-      end
-    }
-    unless value == "false"
-      raise 'Found!'
-    end
-  end
-
-  def adv_check_element_contains(element_objective, element_memory)
+  # Checks if an html element contains the text inputted before in a text_field or an option chosen in a select
+  # Example: on_page('ExamplePage').check_element_contains('test_link', 'field_study_field')
+  # @param element_objective [String] Page element that we want to check
+  # @param element_memory [String] Page element in which we previously wrote the data
+  def check_element_contains(element_objective, element_memory)
     element_objective = element_objective.downcase.gsub(' ', '_')
     element_memory = element_memory.downcase.gsub(' ', '_')
-    wait_until{send("#{element_objective}?")}
-    value = "false"
-    select_primary = send("#{element_objective}")
-    if select_primary.downcase.include? $advanced_text_info[element_memory].downcase
-      value = "true"
-    end
 
-    unless value == "true"
+    select_primary = send("#{element_objective}")
+
+    wait_until{send("#{element_objective}?")}
+
+    unless select_primary.downcase.include? $advanced_text_info[element_memory].downcase
       raise 'Not found'
+    end
+  end
+
+  def check_url (url)
+    if eval(url) != nil
+      unless $browser.url.include? eval(url)
+        p $browser.url
+        p eval(url)
+        raise 'Incorrect URL!'
+      end
+    else
+      unless $browser.url.include? url
+        p $browser.url
+        p url
+        raise 'Incorrect URL!'
+      end
+    end
+  end
+
+  def record_element_text(element)
+    select = send("#{element}_element")
+    $advanced_text_info[element] = select.text
+  end
+
+  def refresh_until_element_exists (times, seconds, element)
+    element = element.downcase.gsub(' ', '_')
+    exists = send("#{element}?")
+    visible = send("#{element}_element")
+    times.to_i.times do
+      if exists && visible.visible?
+        return true
+      else
+        sleep seconds.to_i
+        $browser.refresh
+      end
+    end
+  end
+
+  def refresh_until_element_not_exists (times, seconds, element)
+    element = element.downcase.gsub(' ', '_')
+    exists = send("#{element}?")
+    visible = send("#{element}_element")
+    times.to_i.times do
+      if exists && visible.visible?
+        sleep seconds.to_i
+        $browser.refresh
+      else
+        return true
+      end
+    end
+  end
+
+  def browser_alert (option)
+    option = option.downcase
+    case option
+      when 'ok'
+        $browser.alert.ok
+      when 'cancel'
+        $browser.alert.close
+      else
+        raise 'invalid option for step definition selected!'
     end
   end
 end

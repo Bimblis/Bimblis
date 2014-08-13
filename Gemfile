@@ -5,3 +5,4 @@ gem 'page-object'
 gem 'selenium-webdriver'
 gem 'faker'
 gem 'cucumber'
+gem "yard"

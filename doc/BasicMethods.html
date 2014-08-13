@@ -1,0 +1,1442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Module: BasicMethods
+  
+    &mdash; Documentation by YARD 0.8.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!BasicMethods.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (B)</a> &raquo;
+    
+    
+    <span class="title">BasicMethods</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Module: BasicMethods
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+      <dt class="r1">Includes:</dt>
+      <dd class="r1">PageObject, PageObject::PageFactory</dd>
+      
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/basic_methods.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#browser_alert-instance_method" title="#browser_alert (instance method)">- (Object) <strong>browser_alert</strong>(option) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#check_checkbox-instance_method" title="#check_checkbox (instance method)">- (Object) <strong>check_checkbox</strong>(check, element) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Checks or unchecks a checkbox Example:
+on_page(&#39;ExamplePage&#39;).check_checkbox(&#39;check&#39;,
+&#39;test_checkbox&#39;) Example:
+on_page(&#39;ExamplePage&#39;).check_checkbox(&#39;uncheck&#39;,
+&#39;test_checkbox&#39;).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#check_element_contains-instance_method" title="#check_element_contains (instance method)">- (Object) <strong>check_element_contains</strong>(element_objective, element_memory) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Checks if an html element contains Example:
+on_page(&#39;ExamplePage&#39;).check_element_exists(&#39;exist&#39;,
+&#39;test_link&#39;).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#check_element_exists-instance_method" title="#check_element_exists (instance method)">- (Object) <strong>check_element_exists</strong>(exist, element) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Checks if an html element exists, or not exists.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#check_url-instance_method" title="#check_url (instance method)">- (Object) <strong>check_url</strong>(url) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#click_element-instance_method" title="#click_element (instance method)">- (Object) <strong>click_element</strong>(element) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Clicks in a page element.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#click_radiobutton-instance_method" title="#click_radiobutton (instance method)">- (Object) <strong>click_radiobutton</strong>(element) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Clicks a radiobutton Example:
+on_page(&#39;ExamplePage&#39;).click_radiobutton.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#hover_element-instance_method" title="#hover_element (instance method)">- (Object) <strong>hover_element</strong>(element) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Hovers the mouse over a page element.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#input_text_field-instance_method" title="#input_text_field (instance method)">- (Object) <strong>input_text_field</strong>(faker = &#39;lorem paragraph&#39;, element) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Writes text in a text field.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#record_element_text-instance_method" title="#record_element_text (instance method)">- (Object) <strong>record_element_text</strong>(element) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#refresh_until_element_exists-instance_method" title="#refresh_until_element_exists (instance method)">- (Object) <strong>refresh_until_element_exists</strong>(times, seconds, element) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#refresh_until_element_not_exists-instance_method" title="#refresh_until_element_not_exists (instance method)">- (Object) <strong>refresh_until_element_not_exists</strong>(times, seconds, element) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#select_element-instance_method" title="#select_element (instance method)">- (Object) <strong>select_element</strong>(option, element) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Chooses an option in a select.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="browser_alert-instance_method">
+  
+    - (<tt>Object</tt>) <strong>browser_alert</strong>(option) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/basic_methods.rb', line 228</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_browser_alert'>browser_alert</span> <span class='lparen'>(</span><span class='id identifier rubyid_option'>option</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_option'>option</span> <span class='op'>=</span> <span class='id identifier rubyid_option'>option</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_option'>option</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ok</span><span class='tstring_end'>&#39;</span></span>
+      <span class='gvar'>$browser</span><span class='period'>.</span><span class='id identifier rubyid_alert'>alert</span><span class='period'>.</span><span class='id identifier rubyid_ok'>ok</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>cancel</span><span class='tstring_end'>&#39;</span></span>
+      <span class='gvar'>$browser</span><span class='period'>.</span><span class='id identifier rubyid_alert'>alert</span><span class='period'>.</span><span class='id identifier rubyid_close'>close</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>invalid option for step definition selected!</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="check_checkbox-instance_method">
+  
+    - (<tt>Object</tt>) <strong>check_checkbox</strong>(check, element) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Checks or unchecks a checkbox Example:
+on_page(&#39;ExamplePage&#39;).check_checkbox(&#39;check&#39;,
+&#39;test_checkbox&#39;) Example:
+on_page(&#39;ExamplePage&#39;).check_checkbox(&#39;uncheck&#39;,
+&#39;test_checkbox&#39;)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>check</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Indicates if the checkbox has to be checked or unchecked</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>element</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Page element of the checkbox</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/basic_methods.rb', line 52</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_check_checkbox'>check_checkbox</span> <span class='lparen'>(</span><span class='id identifier rubyid_check'>check</span><span class='comma'>,</span> <span class='id identifier rubyid_element'>element</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_element'>element</span> <span class='op'>=</span> <span class='id identifier rubyid_element'>element</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>_</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_wait_until'>wait_until</span><span class='lbrace'>{</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_element'>element</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_select'>select</span> <span class='op'>=</span> <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_element'>element</span><span class='embexpr_end'>}</span><span class='tstring_content'>_element</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_wait_until'>wait_until</span><span class='lbrace'>{</span><span class='id identifier rubyid_select'>select</span><span class='period'>.</span><span class='id identifier rubyid_visible?'>visible?</span><span class='rbrace'>}</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_check'>check</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>check</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>check_</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_element'>element</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_check'>check</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>uncheck</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>uncheck_</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_element'>element</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>invalid option for step definition selected!</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="check_element_contains-instance_method">
+  
+    - (<tt>Object</tt>) <strong>check_element_contains</strong>(element_objective, element_memory) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Checks if an html element contains Example:
+on_page(&#39;ExamplePage&#39;).check_element_exists(&#39;exist&#39;,
+&#39;test_link&#39;)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>exist</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Indicates if we are checking for the existance or nor existance of the
+element</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>element</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Page element of the element we want to check.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/basic_methods.rb', line 166</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_check_element_contains'>check_element_contains</span><span class='lparen'>(</span><span class='id identifier rubyid_element_objective'>element_objective</span><span class='comma'>,</span> <span class='id identifier rubyid_element_memory'>element_memory</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_element_objective'>element_objective</span> <span class='op'>=</span> <span class='id identifier rubyid_element_objective'>element_objective</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>_</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_element_memory'>element_memory</span> <span class='op'>=</span> <span class='id identifier rubyid_element_memory'>element_memory</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>_</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_select_primary'>select_primary</span> <span class='op'>=</span> <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_element_objective'>element_objective</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_wait_until'>wait_until</span><span class='lbrace'>{</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_element_objective'>element_objective</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbrace'>}</span>
+
+  <span class='kw'>unless</span> <span class='id identifier rubyid_select_primary'>select_primary</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='gvar'>$advanced_text_info</span><span class='lbracket'>[</span><span class='id identifier rubyid_element_memory'>element_memory</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Not found</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="check_element_exists-instance_method">
+  
+    - (<tt>Object</tt>) <strong>check_element_exists</strong>(exist, element) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Checks if an html element exists, or not exists. Example:
+on_page(&#39;ExamplePage&#39;).check_element_exists(&#39;exist&#39;,
+&#39;test_link&#39;)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>exist</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Indicates if we are checking for the existance or nor existance of the
+element</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>element</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Page element of the element we want to check.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/basic_methods.rb', line 145</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_check_element_exists'>check_element_exists</span><span class='lparen'>(</span><span class='id identifier rubyid_exist'>exist</span><span class='comma'>,</span> <span class='id identifier rubyid_element'>element</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_element'>element</span> <span class='op'>=</span> <span class='id identifier rubyid_element'>element</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>_</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_exist'>exist</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>exist</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>unless</span> <span class='id identifier rubyid_wait_until'>wait_until</span><span class='lbrace'>{</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_element'>element</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbrace'>}</span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_element'>element</span><span class='embexpr_end'>}</span><span class='tstring_content'> was not found!</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_exist'>exist</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>not exist</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_element'>element</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_element'>element</span><span class='embexpr_end'>}</span><span class='tstring_content'> was found!</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+
+  <span class='kw'>else</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Incorrect option selected</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="check_url-instance_method">
+  
+    - (<tt>Object</tt>) <strong>check_url</strong>(url) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/basic_methods.rb', line 179</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_check_url'>check_url</span> <span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_eval'>eval</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span> <span class='op'>!=</span> <span class='kw'>nil</span>
+    <span class='kw'>unless</span> <span class='gvar'>$browser</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='id identifier rubyid_eval'>eval</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_p'>p</span> <span class='gvar'>$browser</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span>
+      <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_eval'>eval</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Incorrect URL!</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>else</span>
+    <span class='kw'>unless</span> <span class='gvar'>$browser</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='id identifier rubyid_url'>url</span>
+      <span class='id identifier rubyid_p'>p</span> <span class='gvar'>$browser</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span>
+      <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_url'>url</span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Incorrect URL!</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="click_element-instance_method">
+  
+    - (<tt>Object</tt>) <strong>click_element</strong>(element) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Clicks in a page element. Works with links, buttons, divs, and most html
+elements. Checkboxes, radiobuttons and selects have their own method.
+Example: on_page(&#39;ExamplePage&#39;).click_element(&#39;test_link&#39;)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>element</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Page element to be clicked</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+24
+25
+26
+27
+28
+29
+30
+31
+32</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/basic_methods.rb', line 24</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_click_element'>click_element</span> <span class='lparen'>(</span><span class='id identifier rubyid_element'>element</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_element'>element</span> <span class='op'>=</span> <span class='id identifier rubyid_element'>element</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>_</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_wait_until'>wait_until</span><span class='lbrace'>{</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_element'>element</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_select'>select</span> <span class='op'>=</span> <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_element'>element</span><span class='embexpr_end'>}</span><span class='tstring_content'>_element</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_wait_until'>wait_until</span><span class='lbrace'>{</span><span class='id identifier rubyid_select'>select</span><span class='period'>.</span><span class='id identifier rubyid_visible?'>visible?</span><span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_select'>select</span><span class='period'>.</span><span class='id identifier rubyid_click'>click</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="click_radiobutton-instance_method">
+  
+    - (<tt>Object</tt>) <strong>click_radiobutton</strong>(element) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Clicks a radiobutton Example:
+on_page(&#39;ExamplePage&#39;).click_radiobutton</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>element</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Page element of the radiobutton</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/basic_methods.rb', line 87</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_click_radiobutton'>click_radiobutton</span><span class='lparen'>(</span><span class='id identifier rubyid_element'>element</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_element'>element</span> <span class='op'>=</span> <span class='id identifier rubyid_element'>element</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>_</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_wait_until'>wait_until</span><span class='lbrace'>{</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_element'>element</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_button'>button</span> <span class='op'>=</span> <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_element'>element</span><span class='embexpr_end'>}</span><span class='tstring_content'>_element</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_wait_until'>wait_until</span><span class='lbrace'>{</span><span class='id identifier rubyid_button'>button</span><span class='period'>.</span><span class='id identifier rubyid_enabled?'>enabled?</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_wait_until'>wait_until</span><span class='lbrace'>{</span><span class='id identifier rubyid_button'>button</span><span class='period'>.</span><span class='id identifier rubyid_visible?'>visible?</span><span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>select_</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_element'>element</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="hover_element-instance_method">
+  
+    - (<tt>Object</tt>) <strong>hover_element</strong>(element) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Hovers the mouse over a page element. Example:
+on_page(&#39;ExamplePage&#39;).hover_element(&#39;test_link&#39;)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>element</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Page element to be mouse hover</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+37
+38
+39
+40
+41
+42
+43
+44
+45</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/basic_methods.rb', line 37</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_hover_element'>hover_element</span> <span class='lparen'>(</span><span class='id identifier rubyid_element'>element</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_element'>element</span> <span class='op'>=</span> <span class='id identifier rubyid_element'>element</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>_</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_wait_until'>wait_until</span><span class='lbrace'>{</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_element'>element</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_select'>select</span> <span class='op'>=</span> <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_element'>element</span><span class='embexpr_end'>}</span><span class='tstring_content'>_element</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_wait_until'>wait_until</span><span class='lbrace'>{</span><span class='id identifier rubyid_select'>select</span><span class='period'>.</span><span class='id identifier rubyid_visible?'>visible?</span><span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_select'>select</span><span class='period'>.</span><span class='id identifier rubyid_hover'>hover</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="input_text_field-instance_method">
+  
+    - (<tt>Object</tt>) <strong>input_text_field</strong>(faker = &#39;lorem paragraph&#39;, element) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Writes text in a text field. The text is recorded in a hash, with a key
+equal to the @param element. Example:
+on_page(&#39;ExamplePage&#39;).input_text_field(&#39;lorem name&#39;,
+&#39;test_select&#39;) gem, it will generate a random string. If it doesnt
+coincides, the faker input will be written.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>faker</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>&#39;lorem paragraph&#39;</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Indicates the kind of text to be written. If faker input coincides with an
+element of the faker</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>element</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Page element of the text field</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/basic_methods.rb', line 103</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_input_text_field'>input_text_field</span> <span class='lparen'>(</span><span class='id identifier rubyid_faker'>faker</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>lorem paragraph</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_element'>element</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_element'>element</span> <span class='op'>=</span> <span class='id identifier rubyid_element'>element</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>_</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+
+  <span class='kw'>case</span> <span class='id identifier rubyid_faker'>faker</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>lorem paragraph</span><span class='tstring_end'>&#39;</span></span>
+      <span class='id identifier rubyid_sample_text'>sample_text</span> <span class='op'>=</span> <span class='const'>Faker</span><span class='op'>::</span><span class='const'>Lorem</span><span class='period'>.</span><span class='id identifier rubyid_paragraph'>paragraph</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>lorem name</span><span class='tstring_end'>&#39;</span></span>
+      <span class='id identifier rubyid_sample_text'>sample_text</span> <span class='op'>=</span> <span class='const'>Faker</span><span class='op'>::</span><span class='const'>Name</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>lorem street</span><span class='tstring_end'>&#39;</span></span>
+      <span class='id identifier rubyid_sample_text'>sample_text</span> <span class='op'>=</span> <span class='const'>Faker</span><span class='op'>::</span><span class='const'>Address</span><span class='period'>.</span><span class='id identifier rubyid_street_address'>street_address</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>lorem zip</span><span class='tstring_end'>&#39;</span></span>
+      <span class='id identifier rubyid_sample_text'>sample_text</span> <span class='op'>=</span> <span class='const'>Faker</span><span class='op'>::</span><span class='const'>Address</span><span class='period'>.</span><span class='id identifier rubyid_zip_code'>zip_code</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>lorem phone</span><span class='tstring_end'>&#39;</span></span>
+      <span class='id identifier rubyid_sample_text'>sample_text</span> <span class='op'>=</span> <span class='const'>Faker</span><span class='op'>::</span><span class='const'>PhoneNumber</span><span class='period'>.</span><span class='id identifier rubyid_phone_number'>phone_number</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>lorem email</span><span class='tstring_end'>&#39;</span></span>
+      <span class='id identifier rubyid_sample_text'>sample_text</span> <span class='op'>=</span> <span class='const'>Faker</span><span class='op'>::</span><span class='const'>Internet</span><span class='period'>.</span><span class='id identifier rubyid_email'>email</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>lorem url</span><span class='tstring_end'>&#39;</span></span>
+      <span class='id identifier rubyid_sample_text'>sample_text</span> <span class='op'>=</span> <span class='const'>Faker</span><span class='op'>::</span><span class='const'>Internet</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span>
+    <span class='kw'>else</span>
+      <span class='kw'>if</span> <span class='gvar'>$advanced_text_info</span><span class='lbracket'>[</span><span class='id identifier rubyid_faker'>faker</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='kw'>nil</span>
+        <span class='id identifier rubyid_sample_text'>sample_text</span> <span class='op'>=</span> <span class='gvar'>$advanced_text_info</span><span class='lbracket'>[</span><span class='id identifier rubyid_faker'>faker</span><span class='rbracket'>]</span>
+      <span class='kw'>else</span>
+        <span class='id identifier rubyid_sample_text'>sample_text</span> <span class='op'>=</span> <span class='id identifier rubyid_faker'>faker</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+      <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='gvar'>$advanced_text_info</span><span class='lbracket'>[</span><span class='id identifier rubyid_element'>element</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_sample_text'>sample_text</span>
+
+  <span class='id identifier rubyid_wait_until'>wait_until</span><span class='lbrace'>{</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_element'>element</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_select'>select</span> <span class='op'>=</span> <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_element'>element</span><span class='embexpr_end'>}</span><span class='tstring_content'>_element</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_wait_until'>wait_until</span><span class='lbrace'>{</span><span class='id identifier rubyid_select'>select</span><span class='period'>.</span><span class='id identifier rubyid_visible?'>visible?</span><span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_element'>element</span><span class='embexpr_end'>}</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_sample_text'>sample_text</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="record_element_text-instance_method">
+  
+    - (<tt>Object</tt>) <strong>record_element_text</strong>(element) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+195
+196
+197
+198</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/basic_methods.rb', line 195</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_record_element_text'>record_element_text</span><span class='lparen'>(</span><span class='id identifier rubyid_element'>element</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_select'>select</span> <span class='op'>=</span> <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_element'>element</span><span class='embexpr_end'>}</span><span class='tstring_content'>_element</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='gvar'>$advanced_text_info</span><span class='lbracket'>[</span><span class='id identifier rubyid_element'>element</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_select'>select</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="refresh_until_element_exists-instance_method">
+  
+    - (<tt>Object</tt>) <strong>refresh_until_element_exists</strong>(times, seconds, element) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/basic_methods.rb', line 200</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_refresh_until_element_exists'>refresh_until_element_exists</span> <span class='lparen'>(</span><span class='id identifier rubyid_times'>times</span><span class='comma'>,</span> <span class='id identifier rubyid_seconds'>seconds</span><span class='comma'>,</span> <span class='id identifier rubyid_element'>element</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_element'>element</span> <span class='op'>=</span> <span class='id identifier rubyid_element'>element</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>_</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_exists'>exists</span> <span class='op'>=</span> <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_element'>element</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_visible'>visible</span> <span class='op'>=</span> <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_element'>element</span><span class='embexpr_end'>}</span><span class='tstring_content'>_element</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_times'>times</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='kw'>do</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_exists'>exists</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_visible'>visible</span><span class='period'>.</span><span class='id identifier rubyid_visible?'>visible?</span>
+      <span class='kw'>return</span> <span class='kw'>true</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_sleep'>sleep</span> <span class='id identifier rubyid_seconds'>seconds</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+      <span class='gvar'>$browser</span><span class='period'>.</span><span class='id identifier rubyid_refresh'>refresh</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="refresh_until_element_not_exists-instance_method">
+  
+    - (<tt>Object</tt>) <strong>refresh_until_element_not_exists</strong>(times, seconds, element) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/basic_methods.rb', line 214</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_refresh_until_element_not_exists'>refresh_until_element_not_exists</span> <span class='lparen'>(</span><span class='id identifier rubyid_times'>times</span><span class='comma'>,</span> <span class='id identifier rubyid_seconds'>seconds</span><span class='comma'>,</span> <span class='id identifier rubyid_element'>element</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_element'>element</span> <span class='op'>=</span> <span class='id identifier rubyid_element'>element</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>_</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_exists'>exists</span> <span class='op'>=</span> <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_element'>element</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_visible'>visible</span> <span class='op'>=</span> <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_element'>element</span><span class='embexpr_end'>}</span><span class='tstring_content'>_element</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_times'>times</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='kw'>do</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_exists'>exists</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_visible'>visible</span><span class='period'>.</span><span class='id identifier rubyid_visible?'>visible?</span>
+      <span class='id identifier rubyid_sleep'>sleep</span> <span class='id identifier rubyid_seconds'>seconds</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+      <span class='gvar'>$browser</span><span class='period'>.</span><span class='id identifier rubyid_refresh'>refresh</span>
+    <span class='kw'>else</span>
+      <span class='kw'>return</span> <span class='kw'>true</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="select_element-instance_method">
+  
+    - (<tt>Object</tt>) <strong>select_element</strong>(option, element) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Chooses an option in a select. The option is recorded in a hash, with a key
+equal to the @param element. Example for a test_select with these options:
+“Spain, France, Italy”, Example:
+on_page(&#39;ExamplePage&#39;).test_select(&#39;France&#39;,
+&#39;test_select&#39;)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>option</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Option to be selected (the text the user sees)</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>element</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Page element of the select</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/basic_methods.rb', line 73</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_select_element'>select_element</span> <span class='lparen'>(</span><span class='id identifier rubyid_option'>option</span><span class='comma'>,</span> <span class='id identifier rubyid_element'>element</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_element'>element</span> <span class='op'>=</span> <span class='id identifier rubyid_element'>element</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>_</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_wait_until'>wait_until</span><span class='lbrace'>{</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_element'>element</span><span class='embexpr_end'>}</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_object'>object</span> <span class='op'>=</span> <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_element'>element</span><span class='embexpr_end'>}</span><span class='tstring_content'>_element</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_wait_until'>wait_until</span><span class='lbrace'>{</span><span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_visible?'>visible?</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_wait_until'>wait_until</span><span class='lbrace'>{</span><span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_enabled?'>enabled?</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span><span class='lparen'>(</span><span class='id identifier rubyid_option'>option</span><span class='rparen'>)</span>
+
+  <span class='gvar'>$advanced_text_info</span><span class='lbracket'>[</span><span class='id identifier rubyid_element'>element</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_option'>option</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Tue Aug 12 19:52:43 2014 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.4 (ruby-2.1.1).
+</div>
+
+  </body>
+</html>

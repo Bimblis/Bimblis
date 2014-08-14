@@ -29,3 +29,16 @@ Before do |scenario|
 $text_info = []
 ```
 In your proyects hooks.rb file, in the Before area, you need to add this hash. It is expected for several steps of the gem when making checks of expected text.
+
+Usage
+----------
+If you are doing browser automation with page_objects gem (shame on you if you not), you should have a page.rb document for each tested web. Those documents should look like this:
+
+```ruby
+ class ExamplePage
+ 
+  link (:test_link,                                       id: 'test0')
+  select_list (:test_select,                              id: 'test1')
+  checkbox (:test_checkbox,                               id: 'test2')
+  text_field(:field_study_field,                          id: 'validate_field_of_study')
+  ```

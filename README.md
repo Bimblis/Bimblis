@@ -59,5 +59,5 @@ Now, lets construct a simple Scenario using the Bimblis steps. It will consist i
 These is ALL you need to write to make ready the scenario:
 
 ```cucumber
-Given I navigate to (.*?)
+Given I navigate to "webpage"
 ``` 

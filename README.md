@@ -95,5 +95,5 @@ This way you have the best of both worlds. You dont write code, and still have '
 
 ##Contributors
 
-[Justin Ko](http://stackoverflow.com/users/1200545/justin-ko)
-Zakaria Boutami
+>[Justin Ko](http://stackoverflow.com/users/1200545/justin-ko)
+>Zakaria Boutami

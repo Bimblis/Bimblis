@@ -60,8 +60,8 @@ These is ALL you need to write to make ready the scenario:
 
 ```cucumber
 Given I navigate to 'home_web'
-  And In 'Home', I click the element of 'add_profile'
-  And In 'Home', I fill 'lorem name' in text field 'name_data'
-  And In 'Home', I click the element of 'return'
- Then In 'Home', I check if element 'information' contains the info of element 'name_data'
+  And In "Home", I click the element of "add_profile"
+  And In "Home", I fill 'lorem name' in text field "name_data"
+  And In "Home", I click the element of "return"
+ Then In "Home", I check if element "information" contains the info of element "name_data"
 ``` 

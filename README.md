@@ -1,6 +1,6 @@
 #Bimblis
 
-This gem is a collection of reusable steps and methods for web browsing automation, using cucumber, page-objects gem and Watir.
+This gem is a collection of reusable steps and methods for web browsing automation, using cucumber, page-objects and Watir.
 
 While doing web browser automation, I realiced that I had to write again and again the same methods to do the same operations (click this button, fill that field, check this text is correct, navigate to that URL, check the URL is correct, etc), so the idea of having general methods that were able to do the usual operations in most circunstances was born.
 
@@ -57,7 +57,7 @@ Now, lets construct a simple Scenario using the Bimblis steps. It will consist i
 These is ALL you need to write to make ready the scenario:
 
 ```cucumber
-Given I navigate to 'home_web'
+Given I navigate to "home_web"
   And In "Home", I click the element of "add_profile"
   And In "Home", I fill 'lorem name' in text field "name_data"
   And In "Home", I click the element of "return"
@@ -67,12 +67,28 @@ Given I navigate to 'home_web'
 The test is done. Now you can relax, or start with the next test. As long as you keep using the Bimblis steps, and they should cover about 90% of the tipical automation job, you dont have to write more code.
 
 ##FAQ
-### But I like to write steps kind of 'And I fill the formulary' and I think that this gem breaks the philosophy of Cucumber about making steps that give like a ton of important information so non technical manager can read my stuff.
+### But I like to write steps kind of 'And I fill the formulary' and I think that this gem breaks the philosophy of Cucumber about making steps that give like a ton of important information so non technical managers can read my stuff and understand everything.
 
-Yeah, well. First, the non technical manager that doenst know ruby and is going to download your code to have a good read between coffe and coffe is still to be born. But, anyway, lets suppose you want to make a "traditional use" of cucumber, so, you want something like this:
+Yeah, well. First, the non technical manager that doenst know Ruby and is going to download your code to have a good read between coffe and coffe is still to be born. But, anyway, lets suppose you want to make a "traditional use" of cucumber, so, you want something like this:
 
 ```cucumber
-Given I navigate to 'home_web'
+Given I navigate to "home_web"
   And I create a new profile
  Then I check the new profile contains the correct data 
 ``` 
+
+Easy cheesy. You will have to create the steps now in your local step_definitions folder. They will be something like this:
+
+```cucumber
+And (/I create a new profile/) do
+  step 'And In "Home", I click the element of "add_profile"'
+  step 'And In "Home", I fill 'lorem name' in text field "name_data"'
+  step 'And In "Home", I click the element of "return"'
+end
+
+Then (/I check the new profile contains the correct data/) do
+  step 'Then In "Home", I check if element "information" contains the info of element "name_data"'
+end
+``` 
+
+This way you have the best of both worlds. You dont write code, and still have 'standard' step definitions.

@@ -34,7 +34,7 @@ In my projects, I store the url of the tested pages in a path.rb file that looks
 ```ruby
 class UrlPaths
 
-$web_page                   = 'https://develop.homepage.com/'
+$home_web                   = 'https://develop.homepage.com/'
 $another_web                = 'https://develop.homepage.com/something'
 $yet_another_web            = 'https://develop.homepage.com/place/example'
 ```
@@ -46,18 +46,22 @@ Usage
 If you are doing browser automation with page_objects gem (shame on you if you not), you should have a page.rb document for each tested web. Those documents should look like this (I use Ids just for simplicity, you can use xpath, or any kind of identificator that works for page objects):
 
 ```ruby
- class ExamplePage
+ class HomePage
  
-  link (:new_element,                                     id: 'test0')
+  link (:add_profile,                                     id: 'test0')
   text_field(:name_data,                                  id: 'validate_field_of_study')
-  button(:add_profile,                                    id: 'return')
+  button(:return,                                         id: 'return')
   div(:information,                                       id: 'results')
 ``` 
 
-Now, lets construct a simple Scenario using the Bimblis steps. It will consist in navigating to an URL, click a link, fill some random data in a field, click a button, and check that the written data is now present as text inside a div. I expect that the browser is open in the Before of hooks.rb
+Now, lets construct a simple Scenario using the Bimblis steps. It will consist in navigating to an URL, click a link, fill some random data in a field, click a button, and check that the written data is now present as text inside a div. I expect that the browser is open with Before in hooks.rb, and that everything is happening in the HomePage url.
 
 These is ALL you need to write to make ready the scenario:
 
 ```cucumber
-Given I navigate to 'webpage'
+Given I navigate to 'home_web'
+  And In 'Home', I click the element of 'add_profile'
+  And In 'Home', I fill 'lorem name' in text field 'name_data'
+  And In 'Home', I click the element of 'return'
+ Then In 'Home', I check if element 'information' contains the info of element 'name_data'
 ``` 

@@ -16,7 +16,7 @@ I use RubyMine as IDE. With version 6.3, RubyMine is not able to find scenario s
 ```bash
 ln -s [route of the bimblis gem web_shared_steps.rb file] [route of the proyect features/steps folder]
  ```
-It should be something like this:
+It should be something like this (example):
 ```bash
 ln -s /Users/[User name]/.rvm/gems/ruby-2.1.1/gems/bimblis-0.0.93/lib/features/step_definitions/web_shared_steps.rb /Users/[User name]/Documents/Git/qa-automation/features/step_definitions
  ```

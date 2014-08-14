@@ -1,5 +1,4 @@
-Bimblis
-=======
+#Bimblis
 
 This gem is a collection of reusable steps and methods for web browsing automation, using cucumber, page-objects gem and Watir.
 
@@ -7,8 +6,8 @@ While doing web browser automation, I realiced that I had to write again and aga
 
 Basically, to write a new Scenario with this gem, the tester should only identify the html elements in page_object documents, and write the cucumber steps. To write new code should only be done when you need something special. 
 
-Installing
-----------
+##Installing
+
 ```bash
 gem install bimblis
 ```
@@ -65,3 +64,8 @@ Given I navigate to 'home_web'
   And In "Home", I click the element of "return"
  Then In "Home", I check if element "information" contains the info of element "name_data"
 ``` 
+
+The test is done. Now you can relax, or start with the next test. As long as you keep using the Bimblis steps, and they should cover about 90% of the tipical automation job, you dont have to write more code.
+
+FAQ
+----------

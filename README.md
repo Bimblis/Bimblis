@@ -40,8 +40,7 @@ $yet_another_web            = 'https://develop.homepage.com/place/example'
 If you store your URL with this system, you can use one of the Bimblis steps to navigate to the different URLs, if not, you will have to build your own scenario and method.
 
 
-Usage
-----------
+##Usage
 If you are doing browser automation with page_objects gem (shame on you if you not), you should have a page.rb document for each tested web. Those documents should look like this (I use Ids just for simplicity, you can use xpath, or any kind of identificator that works for page objects):
 
 ```ruby
@@ -67,5 +66,13 @@ Given I navigate to 'home_web'
 
 The test is done. Now you can relax, or start with the next test. As long as you keep using the Bimblis steps, and they should cover about 90% of the tipical automation job, you dont have to write more code.
 
-FAQ
-----------
+##FAQ
+### But I like to write steps kind of 'And I fill the formulary' and I think that this gem breaks the philosophy of Cucumber about making steps that give like a ton if important information so non technical manager can read my stuff.
+
+Yeah, well. First, the non technical manager that doenst know ruby and is going to download your code to have a good read between coffe and coffe is still to be born. But, anyway, lets suppose you want to make a "traditional use" of cucumber, so, you want something like this:
+
+```cucumber
+Given I navigate to 'home_web'
+  And I create a new profile
+ Then I check the new profile contains the correct data 
+``` 

@@ -30,15 +30,34 @@ $text_info = []
 ```
 In your proyects hooks.rb file, in the Before area, you need to add this hash. It is expected for several steps of the gem when making checks of expected text.
 
+In my projects, I store the url of the tested pages in a path.rb file that looks like this:
+```ruby
+class UrlPaths
+
+$web_page                   = 'https://develop.homepage.com/'
+$another_web                = 'https://develop.homepage.com/something'
+$yet_another_web            = 'https://develop.homepage.com/place/example'
+```
+If you store your URL with this system, you can use one of the Bimblis steps to navigate to the different URLs, if not, you will have to build your own scenario and method.
+
+
 Usage
 ----------
-If you are doing browser automation with page_objects gem (shame on you if you not), you should have a page.rb document for each tested web. Those documents should look like this:
+If you are doing browser automation with page_objects gem (shame on you if you not), you should have a page.rb document for each tested web. Those documents should look like this (I use Ids just for simplicity, you can use xpath, or any kind of identificator that works for page objects):
 
 ```ruby
  class ExamplePage
  
-  link (:test_link,                                       id: 'test0')
-  select_list (:test_select,                              id: 'test1')
-  checkbox (:test_checkbox,                               id: 'test2')
-  text_field(:field_study_field,                          id: 'validate_field_of_study')
-  ```
+  link (:new_element,                                     id: 'test0')
+  text_field(:name_data,                                  id: 'validate_field_of_study')
+  button(:add_profile,                                    id: 'return')
+  div(:information,                                       id: 'results')
+``` 
+
+Now, lets construct a simple Scenario using the Bimblis steps. It will consist in navigating to an URL, click a link, fill some random data in a field, click a button, and check that the written data is now present as text inside a div. I expect that the browser is open in the Before of hooks.rb
+
+These is ALL you need to write to make ready the scenario:
+
+```cucumber
+I navigate to (.*?)
+``` 

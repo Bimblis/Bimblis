@@ -26,7 +26,6 @@ If done correctly, for a scenario in which you use a Bimblis gem step, you can c
 
 ```ruby
 Before do |scenario|
-#Hash for storing Info in the scenarios
 $text_info = []
 ```
-In your proyects hooks.rb file, you need to add this hash. It is expected for several steps of the gem when making checks of expected text.
+In your proyects hooks.rb file, in the Before area, you need to add this hash. It is expected for several steps of the gem when making checks of expected text.

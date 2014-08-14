@@ -67,7 +67,7 @@ Given I navigate to 'home_web'
 The test is done. Now you can relax, or start with the next test. As long as you keep using the Bimblis steps, and they should cover about 90% of the tipical automation job, you dont have to write more code.
 
 ##FAQ
-### But I like to write steps kind of 'And I fill the formulary' and I think that this gem breaks the philosophy of Cucumber about making steps that give like a ton if important information so non technical manager can read my stuff.
+### But I like to write steps kind of 'And I fill the formulary' and I think that this gem breaks the philosophy of Cucumber about making steps that give like a ton of important information so non technical manager can read my stuff.
 
 Yeah, well. First, the non technical manager that doenst know ruby and is going to download your code to have a good read between coffe and coffe is still to be born. But, anyway, lets suppose you want to make a "traditional use" of cucumber, so, you want something like this:
 

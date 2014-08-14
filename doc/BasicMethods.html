@@ -171,9 +171,10 @@ on_page(&#39;ExamplePage&#39;).check_checkbox(&#39;uncheck&#39;,
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Checks if an html element contains Example:
-on_page(&#39;ExamplePage&#39;).check_element_exists(&#39;exist&#39;,
-&#39;test_link&#39;).</p>
+<p>Checks if an html element contains the text inputted before in a text_field
+or an option chosen in a select Example:
+on_page(&#39;ExamplePage&#39;).check_element_contains(&#39;test_link&#39;,
+&#39;field_study_field&#39;).</p>
 </div></span>
   
 </li>
@@ -586,9 +587,10 @@ on_page(&#39;ExamplePage&#39;).check_checkbox(&#39;uncheck&#39;,
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Checks if an html element contains Example:
-on_page(&#39;ExamplePage&#39;).check_element_exists(&#39;exist&#39;,
-&#39;test_link&#39;)</p>
+<p>Checks if an html element contains the text inputted before in a text_field
+or an option chosen in a select Example:
+on_page(&#39;ExamplePage&#39;).check_element_contains(&#39;test_link&#39;,
+&#39;field_study_field&#39;)</p>
 
 
   </div>
@@ -599,7 +601,7 @@ on_page(&#39;ExamplePage&#39;).check_element_exists(&#39;exist&#39;,
   
     <li>
       
-        <span class='name'>exist</span>
+        <span class='name'>element_objective</span>
       
       
         <span class='type'>(<tt>String</tt>)</span>
@@ -608,15 +610,14 @@ on_page(&#39;ExamplePage&#39;).check_element_exists(&#39;exist&#39;,
       
         &mdash;
         <div class='inline'>
-<p>Indicates if we are checking for the existance or nor existance of the
-element</p>
+<p>Page element that we want to check</p>
 </div>
       
     </li>
   
     <li>
       
-        <span class='name'>element</span>
+        <span class='name'>element_memory</span>
       
       
         <span class='type'>(<tt>String</tt>)</span>
@@ -625,7 +626,7 @@ element</p>
       
         &mdash;
         <div class='inline'>
-<p>Page element of the element we want to check.</p>
+<p>Page element in which we previously wrote the data</p>
 </div>
       
     </li>
@@ -706,7 +707,7 @@ on_page(&#39;ExamplePage&#39;).check_element_exists(&#39;exist&#39;,
       
         &mdash;
         <div class='inline'>
-<p>Indicates if we are checking for the existance or nor existance of the
+<p>Indicates if we are checking for the existence or nor existence of the
 element</p>
 </div>
       
@@ -1433,7 +1434,7 @@ on_page(&#39;ExamplePage&#39;).test_select(&#39;France&#39;,
 </div>
 
     <div id="footer">
-  Generated on Tue Aug 12 19:52:43 2014 by
+  Generated on Thu Aug 14 21:21:50 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.1.1).
 </div>

@@ -7,7 +7,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 Gem::Specification.new do |spec|
   spec.name          = "bimblis"
   spec.version       = '0.0.94'
-  spec.authors       = ["pabloFernandezGarcia"]
+  spec.authors       = ["Bimblis"]
   spec.email         = ["pablofernandezgarcia@gmail.com"]
   spec.summary       = 'Easier test automation system'
   spec.description   = 'Easier test automation'

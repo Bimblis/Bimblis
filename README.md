@@ -97,4 +97,4 @@ This way you have the best of both worlds. You don’t write code, and still hav
 ##Contributors
 
 * [Justin Ko](http://stackoverflow.com/users/1200545/justin-ko) (stack overflow help)
-* Zakaria Boutami
+* [Zakaria Boutami](https://github.com/ZescherW)

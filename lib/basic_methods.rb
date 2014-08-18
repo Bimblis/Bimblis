@@ -16,19 +16,27 @@ module BasicMethods
   # -------------------------------------------------------------------------------------------------------------------
 
   ### INTERACTIVE METHODS
-
+  
   # Clicks in a page element. Works with links, buttons, divs, and most html elements.
   # Checkboxes, radiobuttons and selects have their own method.
   # Example: on_page('ExamplePage').click_element('test_link')
   # @param element [String] Page element to be clicked
-  def click_element (element)
+  # @param internally [Boolean] determines if javascript will be used to interact with the element. The value of the parameter is 'false' by default.
+  def click_element (element, internally = false)
     element = element.downcase.gsub(' ', '_')
     wait_until{send("#{element}?")}
 
     select = send("#{element}_element")
-    wait_until{select.visible?}
 
-    select.click
+    if internally
+      script = <<-JS
+            arguments[0].click();
+      JS
+      self.execute_script(script, select)
+    else
+      wait_until{select.visible?}
+      select.click
+    end
   end
 
   # Hovers the mouse over a page element.
@@ -43,23 +51,40 @@ module BasicMethods
 
     select.hover
   end
-
+  
   # Checks or unchecks a checkbox
   # Example: on_page('ExamplePage').check_checkbox('check', 'test_checkbox')
   # Example: on_page('ExamplePage').check_checkbox('uncheck', 'test_checkbox')
   # @param check [String] Indicates if the checkbox has to be checked or unchecked
   # @param element [String] Page element of the checkbox
-  def check_checkbox (check, element)
+  # @param internally [Boolean] determines if javascript will be used to interact with the element. The value of the parameter is 'false' by default.
+  def check_checkbox (check, element, internally = false)
     element = element.downcase.gsub(' ', '_')
     wait_until{send("#{element}?")}
 
     select = send("#{element}_element")
-    wait_until{select.visible?}
 
     if check.downcase == 'check'
-      send("check_#{element}")
+      if internally
+        script = <<-JS
+            arguments[0].checked = true;
+        JS
+        self.execute_script(script, select)
+      else
+        wait_until{select.visible?}
+        send("check_#{element}")
+      end
+
     elsif check.downcase == 'uncheck'
-      send("uncheck_#{element}")
+      if internally
+        script = <<-JS
+            arguments[0].checked = false;
+        JS
+        self.execute_script(script, select)
+      else
+        wait_until{select.visible?}
+        send("uncheck_#{element}")
+      end
     else
       raise 'invalid option for step definition selected!'
     end
@@ -70,13 +95,27 @@ module BasicMethods
   # Example: on_page('ExamplePage').test_select('France', 'test_select')
   # @param option [String] Option to be selected (the text the user sees)
   # @param element [String] Page element of the select
-  def select_element (option, element)
+  # @param internally [Boolean] determines if javascript will be used to interact with the element. The value of the parameter is 'false' by default.
+  def select_element (option, element, internally = false)
     element = element.downcase.gsub(' ', '_')
     wait_until{send("#{element}?")}
     object = send("#{element}_element")
-    wait_until{object.visible?}
-    wait_until{object.enabled?}
-    object.select(option)
+
+    if internally
+      script = <<-JS
+          for (var i = 0; i < arguments[0].options.length; i++) {
+            if (arguments[0].options[i].text === #{option}) {
+                arguments[0].selectedIndex = i;
+                break;
+            }
+          }
+      JS
+      self.execute_script(script, select)
+    else
+      wait_until{object.visible?}
+      wait_until{object.enabled?}
+      object.select(option)
+    end
 
     $advanced_text_info[element] = option
   end
@@ -100,7 +139,8 @@ module BasicMethods
   # @param faker [String] Indicates the kind of text to be written. If faker input coincides with an element of the faker
   # gem, it will generate a random string. If it doesnt coincides, the faker input will be written.
   # @param element [String] Page element of the text field
-  def input_text_field (faker = 'lorem paragraph', element)
+  # @param internally [Boolean] determines if javascript will be used to interact with the element. The value of the parameter is 'false' by default.  
+  def input_text_field (element, faker = 'lorem paragraph', internally = false)
     element = element.downcase.gsub(' ', '_')
 
     case faker.downcase
@@ -129,9 +169,15 @@ module BasicMethods
 
     wait_until{send("#{element}?")}
     select = send("#{element}_element")
-    wait_until{select.visible?}
 
-    send("#{element}=", sample_text)
+    if internally
+      script = <<-JS
+            arguments[0].value = '#{sample_text}'
+      JS
+      self.execute_script(script, select)
+    else
+      wait_until{select.visible?}
+      send("#{element}=", sample_text)
   end
 
   # -------------------------------------------------------------------------------------------------------------------

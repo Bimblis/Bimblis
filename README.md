@@ -42,7 +42,7 @@ If you store your URL with this system, you can use one of the Bimblis steps to 
 
 
 ##Usage
-If you are doing browser automation with page_objects gem (shame on you if you not), you should have a page.rb document for each tested web. Those documents should look like this (I use Ids just for simplicity, you can use xpath, or any kind of identificator that works for page objects):
+If you are doing browser automation with page_objects gem (shame on you if you not), you should have a page.rb document for each tested web. Those documents should look like this (I use Ids just for simplicity, you can use xpath, or any kind of identifier that works for page objects):
 
 ```ruby
  class HomePage
@@ -65,12 +65,12 @@ Given I navigate to "home_web"
  Then In "Home", I check if element "information" contains the info of element "name_data"
 ``` 
 
-The test is done. Now you can relax, or start with the next test. As long as you keep using the Bimblis steps, and they should cover about 90% of the tipical automation job, you dont have to write more code.
+The test is done. Now you can relax, or start with the next test. As long as you keep using the Bimblis steps, and they should cover about 90% of the typical automation job, you don’t have to write more code.
 
 ##FAQ
 ### But I like to write steps kind of 'And I fill the formulary' and I think that this gem breaks the philosophy of Cucumber about making steps that give like a ton of important information so non technical managers can read my stuff and understand everything.
 
-Yeah, well. First, the non technical manager that doenst know Ruby and is going to download your code to have a good read between coffe and coffe is still to be born. But, anyway, lets suppose you want to make a "traditional use" of cucumber, so, you want something like this:
+Yeah, well. First, the non technical manager that doesn’t know Ruby and is going to download your code to have a good read between coffee and coffee is still to be born. But, anyway, lets suppose you want to make a "traditional use" of cucumber, so, you want something like this:
 
 ```cucumber
 Given I navigate to "home_web"
@@ -92,7 +92,7 @@ Then (/I check the new profile contains the correct data/) do
 end
 ``` 
 
-This way you have the best of both worlds. You dont write code, and still have 'standard' step definitions.
+This way you have the best of both worlds. You don’t write code, and still have 'standard' step definitions.
 
 ##Contributors
 

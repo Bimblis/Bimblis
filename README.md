@@ -11,7 +11,7 @@ Basically, to write a new Scenario with this gem, the tester should only identif
 ```bash
 gem install bimblis
 ```
-I use RubyMine as IDE. In version 6.3, RubyMine is not able to find scenario steps contained inside gems (even if the scenarios work when launched throught terminal). To ammend this, the easiest solution is to create a link of the gem inside the proyect.
+I use RubyMine as IDE. In version 6.3, RubyMine is not able to find scenario steps contained inside gems (even if the scenarios work when launched thought terminal). To amend this, the easiest solution is to create a link of the gem inside the project.
 
 Type in terminal:
 ```bash

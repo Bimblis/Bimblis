@@ -27,9 +27,10 @@ If done correctly, for a scenario in which you use a Bimblis gem step, you can c
 Before do |scenario|
 $text_info = []
 ```
-In your proyects hooks.rb file, in the Before area, you need to add this hash. It is expected for several steps of the gem when making checks of expected text.
+In your projects hooks.rb file, in the Before area, you need to add this hash. It is expected for several steps of the gem when making checks of expected text.
 
 In my projects, I store the url of the tested pages in a path.rb file that looks like this:
+
 ```ruby
 class UrlPaths
 

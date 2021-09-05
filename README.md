@@ -4,7 +4,7 @@ This gem is a collection of reusable steps and methods for web browsing automati
 
 While doing web browser automation, I realised that I had to write again and again the same methods to do the same operations (click this button, fill that field, check this text is correct, navigate to that URL, check the URL is correct, etc), so the idea of having general methods that were able to do the usual operations in most circumstances was born.
 
-Basically, to write a new Scenario with this gem, the tester should only identify the html elements in page_object documents, and write the cucumber steps. To write new code should only be done when you need something special.
+To write a new Scenario with this gem, the tester should only identify the html elements in page_object documents, and write the cucumber steps. To write new code should only be done when you need something special.
 
 ##Installing
 
